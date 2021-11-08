@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh; /*poora screen le*/
+    height: 100vh; /*these both for kitni apni width height mein dikhni chahiye*/
+    width: 100vw;
+}
+.chor{
+    background-image: url(theif.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:233px;
+    height: 216px;
+    position: absolute;
+    bottom:0;
+    right:52px;
+}
+.obstacle{
+    background-image: url(police.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:283px;
+    height: 250px;
+    position: absolute;
+    bottom:0;
+    left:52px;
+
+}
+.gameOver{
+position:relative;
+top:63px;
+font-size:53px;
+text-align: center;
+font-family: sans-serif;
+}
+.animateChor{
+    animation:animateChor 1s linear;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+#scoreCont{
+    font-size: 25px;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family:sans-serif;
+    border-radius: 10px;
+}
+@keyframes animateChor {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom:422px;
+    }
+    100%{
+        bottom:0;
+    }
+    
+}
+@keyframes obstacleAni {
+    100%{
+        left:100vw;
+    }
+    0%{
+        left:-10px;
+    }
+    
+    
+}
